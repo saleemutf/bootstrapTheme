@@ -1,0 +1,68 @@
+// scss variables over ride
+$primary:       #0099D6;
+$secondary:     #002449;
+$btn-font-weight: 600;
+
+//body styles
+$body-bg: #f7f9fc;
+$body-color:#666666;
+$btn-font-weight: 600;
+$font-family-base: 'Roboto';
+
+//buttons
+$btn-color: #fff;
+$btn-font-family: 'Inter';
+$btn-font-size: 16px;
+$btn-font-weight: 500;
+
+//headings
+$h1-font-size: 22px;
+$h2-font-size: 18px;
+$h3-font-size: 14px;
+$h4-font-size: 12px;
+$headings-color: #224D84;
+$headings-font-weight: 600;
+$headings-font-family:'Inter';
+//lists
+$list-group-color: #666666;
+
+//forms
+$input-bg: #ffffff;
+$form-label-color: #002449;
+$input-color:#717F8C;
+
+//tables
+$table-bg: #fff;
+$table-color: #666666;
+$table-caption-color: #224D84;
+
+//card
+$card-bg: #ffffff;
+;
+
+//paragraph
+p {
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color:#fff;
+}
+table {
+    font-family: 'Inter';
+    th {
+        font-weight: 600;
+        color: #224D84;
+    } td {
+        font-weight: 400;
+    }
+}
+table.table {
+    th {
+        color: #224D84;
+        background-color: #f7f9fc;
+    }
+}
