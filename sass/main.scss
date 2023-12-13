@@ -35,10 +35,11 @@ $input-color:#717F8C;
 $table-bg: #fff;
 $table-color: #666666;
 $table-caption-color: #224D84;
+$table-cell-padding-y:0.7rem;
 
 //card
 $card-bg: #ffffff;
-;
+
 
 //paragraph
 p {
@@ -51,18 +52,19 @@ p {
     --bs-btn-color: #fff;
     --bs-btn-hover-color:#fff;
 }
-table {
-    font-family: 'Inter';
+table.table {
+    font-family: "Inter";
+    font-size: 0.75rem;
     th {
         font-weight: 600;
-        color: #224D84;
+        color:  #011E48;
+        background-color: #E9F6FE;
+        vertical-align: middle;
     } td {
-        font-weight: 400;
+        font-weight: 500;
+        vertical-align: middle;
+        
+        
     }
-}
-table.table {
-    th {
-        color: #224D84;
-        background-color: #f7f9fc;
-    }
+    
 }

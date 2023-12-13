@@ -17,6 +17,7 @@
     
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
 <link href="css/main.css" rel="stylesheet">
 
@@ -97,6 +98,15 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      input#exampleFormControlInput1 {
+    border-radius: 20px;
+    color: #0099D5;
+    border-color: #0099D5;
+}
+::placeholder {
+  color: #0099D5;
+  opacity: 1; /* Firefox */
+}
     </style>
 
     
@@ -129,32 +139,56 @@
 
   </form>
 </main>
-  
-<table class="table table-hover table-borderless text-center" style="
-width: 60%;
-margin: 0 auto;">
+<div class="d-flex justify-content-between">
+  <div class="mb-3 ">
+    <h1>Pre loaded Clusters Analysis</h1>
+  </div>
+  <div class="mb-3 ">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Search">
+    
+    <button class="btn btn-primary py-2">Add Clusters</button>
+    <button class="btn btn-primary py-2">Custom Analysis</button>
+  </div>
+
+  </div>
+<table class="table table-hover table-borderless" >
   <thead>
     <tr>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col" class=" ps-4">Cluster Name</th>
+      <th scope="col">Cluster Type</th>
+      <th scope="col">Trader</th>
+      <th scope="col">P&L Threshold</th>
+      <th scope="col">Index Threshold</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr class="border-bottom">
+      <td class="align-middle"><input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault"> Mark</td>
+      <td>Otto</td>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td><i class="bi bi-pen"></i> <i class="bi bi-eye"></i> </td>
     </tr>
-    <tr>
+    <tr class="border-bottom">
+      <td><input class="form-check-input  me-2" type="checkbox" value="" id="flexCheckDefault"> Jacob</td>
+      <td>Thornton</td>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
+      <td><i class="bi bi-pen"></i> <i class="bi bi-eye"></i> </td>
     </tr>
-    <tr><td>Larry</td>
+    <tr>
+      <td><input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault"> Larry</td>
+      <td>Larry the Bird</td>
+      <td>Larry</td>
       <td>Larry the Bird</td>
       <td>@twitter</td>
+      <td><i class="bi bi-pen"> </i> <i class="bi bi-eye"></i></td>
     </tr>
+    
+    
   </tbody>
 </table>
 
@@ -163,10 +197,17 @@ margin: 0 auto;">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p>Current year is <span id="currentYear"></span></p>
+
   </div>
 </div>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 
     </body>
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;
+</script>
+
 </html>
